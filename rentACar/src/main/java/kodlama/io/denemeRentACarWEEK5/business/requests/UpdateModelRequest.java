@@ -1,4 +1,4 @@
-	package kodlama.io.denemeRentACarWEEK5.business.requests;
+package kodlama.io.denemeRentACarWEEK5.business.requests;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -11,13 +11,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class CreateBrandsRequests {
-
+public class UpdateModelRequest {
+	
+	private int id;
+	
 	@NotNull
 	@NotBlank
-	@Size(min = 3, max = 20)
+	@Size(min = 3 , max = 20)
 	private String name;
-
 	
+	private int brandId;
 	
 }

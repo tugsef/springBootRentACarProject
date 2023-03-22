@@ -10,6 +10,7 @@ import kodlama.io.denemeRentACarWEEK5.business.requests.CreateBrandsRequests;
 import kodlama.io.denemeRentACarWEEK5.business.requests.UpdateBrandsRequests;
 import kodlama.io.denemeRentACarWEEK5.business.responses.GetAllBrandsResponse;
 import kodlama.io.denemeRentACarWEEK5.business.responses.GetByIdBrandResponse;
+import kodlama.io.denemeRentACarWEEK5.business.rules.BrandBusinessRules;
 import kodlama.io.denemeRentACarWEEK5.core.utilies.mapper.ModelMapparService;
 import kodlama.io.denemeRentACarWEEK5.dataAccess.absracts.BrandsRepository;
 import kodlama.io.denemeRentACarWEEK5.entity.Brand;
@@ -21,7 +22,7 @@ public class BrandManager implements BrandService {
 
 	private BrandsRepository brandsRepository;
 	private ModelMapparService modelMapparService;
-	
+	private BrandBusinessRules brandBusinessRules;
 
 
 	@Override
@@ -37,6 +38,7 @@ public class BrandManager implements BrandService {
 
 	@Override
 	public void add(CreateBrandsRequests createBrandsRequests) {
+	 this.brandBusinessRules.checkIfBrandNameExists(createBrandsRequests.getName());
 		Brand brand = this.modelMapparService.forRequest().map(createBrandsRequests, Brand.class);
 		brandsRepository.save(brand);
 		}

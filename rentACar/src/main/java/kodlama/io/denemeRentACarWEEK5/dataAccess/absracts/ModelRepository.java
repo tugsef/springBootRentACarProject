@@ -2,8 +2,8 @@ package kodlama.io.denemeRentACarWEEK5.dataAccess.absracts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import kodlama.io.denemeRentACarWEEK5.entity.Brand;
+import kodlama.io.denemeRentACarWEEK5.entity.Model;
 
-public interface BrandsRepository extends JpaRepository<Brand, Integer> {
+public interface ModelRepository extends JpaRepository<Model , Integer>{
 	boolean existsByName(String name);
 }
