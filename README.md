@@ -21,7 +21,7 @@ Repository Eğitmen (Linkedin)[Engin Demirog tarafından](https://www.linkedin.c
 |***Sefa Demirtaş***|
 |:-------------|
 |*Java Developer*|
-|[Linkedin](https://www.linkedin.com/in/sefa-demirta%C5%9F-86b473230/)|
+|[Linkedin](https://www.linkedin.com/in/sefa-demirtas)|
 |[Patika.dev](https://app.patika.dev/sefad)|
 |sefa.demirtas91@gmail.com|
 
